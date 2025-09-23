@@ -32,7 +32,6 @@ except FileNotFoundError:
 # ----------------------------
 st.title("Discourse-Pragmatic LIKE Classifier")
 
-# Provide a safe default intro (monolith usually had this variable inline)
 _intro_default = (
     "Welcome to the **LIKE** classifier! Use the decision tree to identify the function of **LIKE** in context.\n"
     "Based on your answers below, the tree first helps determine whether the use is **propositional** or "
@@ -300,7 +299,7 @@ with left_shell:
 st.markdown("</div>", unsafe_allow_html=True)
 
 # ----------------------------
-# Footer — optional (no crash if missing in user's theme)
+# Footer — optional 
 # ----------------------------
 # Open footer wrapper (HTML)
 st.markdown("<div id='app-footer'><div class='footer-inner'><div class='footer-content'>", unsafe_allow_html=True)
