@@ -1,0 +1,183 @@
+/* =========================
+   MINIMAL BASELINE (global)
+   ========================= */
+html, body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size:14px; line-height:1.3; }
+.block-container { padding-top: 1rem !important; }
+
+/* =========================
+   TITLE (single source)
+   ========================= */
+h1#discourse-pragmatic-like-classifier{
+  --fs: 2rem; --fw: 800; --color: #000;
+  --mt: .1em; --mb: .5em; --ml: 180px;
+  font-size: var(--fs); font-weight: var(--fw); color: var(--color);
+  margin-top: var(--mt) !important; margin-bottom: var(--mb) !important;
+  margin-left: var(--ml) !important;
+}
+
+/* =========================
+   RESULT BADGE (top pill)
+   ========================= */
+.res-badge{
+  /* EDIT HERE */
+  --bg:#cecece; --fg:#000000; --border:8px solid color-mix(in srgb, #cecece 45%, transparent);
+  --fs:1.4rem; --fw:900; --radius:20px; --py:15px; --px:10px;
+  display:block; width:100%; box-sizing:border-box; white-space:pre-line; text-align:left;
+  background:var(--bg); color:var(--fg); border:var(--border);
+  font-size:var(--fs); font-weight:var(--fw); border-radius:var(--radius); padding:var(--py) var(--px);
+}
+
+/* =========================
+   RESULT DESCRIPTION (under badge)
+   ========================= */
+.res-desc{
+  margin-top: 12px !important;  /* gap between badge and description */
+}
+.res-desc{
+  /* EDIT HERE */
+  --bg:#ffffff; --fg:#000; --bc:#cecece; --radius:10px; --pad:12px; --fs:.95rem;
+  background:var(--bg); color:var(--fg); border:1px solid var(--bc);
+  border-radius:var(--radius); padding:var(--pad); font-size:var(--fs); line-height:1.3; text-align:left;
+}
+.res-desc strong { font-weight:700; color:#000; }
+.res-desc em { font-style:italic; color:#64748b; }
+
+/* =========================
+   QUESTION CARD HEADER
+   ========================= */
+.cm-q{
+  /* EDIT HERE */
+  --bg:#cecece; --fg:#000; --bc:#cecece; --bw:1.5px;
+  --radius:20px; --py:15px; --px:15px; --fs:1rem; --fw:500;
+  background:var(--bg); color:var(--fg); border:var(--bw) solid var(--bc); border-radius:var(--radius);
+  padding:var(--py) var(--px); margin:0 0 12px 0; font-size:var(--fs); font-weight:var(--fw); line-height:1.3; text-align: center;
+}
+
+/* Optional highlight when on path */
+.cm-card.path .cm-q{ border-color:#FC9C4D; }
+
+
+/* =========================
+   EXAMPLE BOX
+   ========================= */
+.cm-ex{
+  /* EDIT HERE */
+  --bg:#ffffff; --fg:#64748b; --bc:#cecece; --bw:1px; --radius:8px; --py:10px; --px:14px; --fs:.92rem;
+  background:var(--bg); color:var(--fg); border:var(--bw) solid var(--bc); border-radius:var(--radius);
+  padding:var(--py) var(--px); margin:8px 0; white-space:pre-wrap; font-size:var(--fs);
+}
+.cm-ex strong, .cm-ex b{ font-weight:700; color:#000; }
+
+/* =========================
+   YES/NO BUTTONS (generic)
+   ========================= */
+.choice-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+.stButton>button{
+  /* EDIT HERE (default) */
+  --bg:transparent; --fg:#000; --bc:#cecece;
+  --fs:1rem; --fw:700; --radius:12px; --minh:40px; --py:12px; --px:12px;
+  width:100%; min-height:var(--minh); border-radius:var(--radius); padding:var(--py) var(--px);
+  font-weight:var(--fw); font-size:var(--fs);
+  border:1px solid var(--bc); background:var(--bg); color:var(--fg);
+  transition:transform .05s, box-shadow .15s, background-color .15s, border-color .15s, filter .15s;
+}
+.stButton>button:hover{
+  /* EDIT HERE (hover) */
+  --hover-bg:transparent; --hover-fg:#000; --hover-bc:#cecece;
+  background:var(--hover-bg); color:var(--hover-fg); border-color:var(--hover-bc);
+}
+.stButton>button:active{ transform:translateY(1px) scale(.995); }
+.stButton>button:focus-visible{ outline:none; box-shadow:0 0 0 3px rgba(252,156,77,.6); }
+
+/* =========================
+   ANSWER LABEL PILL (inside cards)
+   ========================= */
+.cm-labelbar{
+  /* EDIT HERE (neutral/default) */
+  --bg:#f3f4f6; --fg:#111827; --bc:#e5e7eb;
+  --radius:50px; --fs:12px; --fw:700; --lh:1; --minh:80px; --w:250px;
+  display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box;
+  padding:10px 15px; border-radius:var(--radius); font-size:var(--fs); font-weight:var(--fw); line-height:var(--lh);
+  min-height:var(--minh); width:min(var(--w),100%); max-width:100%; margin:0 auto 8px; text-align:center;
+  white-space:normal; word-break:break-word; overflow:hidden; text-overflow:ellipsis;
+  border:1px solid var(--bc); background:var(--bg); color:var(--fg);
+}
+/* Variants */
+.cm-labelbar.yes{ /* EDIT HERE (Yes) */ --bg:#e8f5e9; --fg:#248F59; --bc:#248F59; }
+.cm-labelbar.no { /* EDIT HERE (No)  */ --bg:#facfd1; --fg:#AB2B30; --bc:#AB2B30; }
+
+/* =========================
+   (Optional) Column min-width safety
+   ========================= */
+#layout-top div[data-testid="column"]{ min-width:0 !important; }
+
+/* =========================
+   APP FOOTER (Sources/Disclaimer)
+   ========================= */
+
+/* Local knobs — change per element, not global */
+#app-footer{
+  --bg: transparent;              /* footer background */
+  --fg: #6b7280;                  /* text color */
+  --link: inherit;                /* link color */
+  --bc: #e5e7eb;                  /* top border color */
+  --fs: 16px;                     /* font size */
+  --lh: 1.2;                      /* line height */
+  --pad-y: 16px;                  /* vertical padding */
+  --pad-x: 0;                     /* horizontal padding inside container */
+  --maxw: 700px;                 /* content width */
+  --gap-top: 24px;                /* space before footer */
+
+  margin-top: var(--gap-top);
+  border-top: 1px solid var(--bc);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: var(--fs);
+  line-height: var(--lh);
+}
+
+#app-footer .footer-inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--pad-y) var(--pad-x);
+}
+
+#app-footer a{
+  color: var(--link);
+  text-decoration: underline;
+}
+
+/* Optional: compact bullets & spacing */
+#app-footer ul{ margin: .5em 0 0 1.25em; padding: 0; }
+#app-footer li{ margin: .2em 0; }
+
+
+/* =========================
+   RIGHT PANEL HEADER (the "Jump to a result" label)
+   ========================= */
+.results-header{
+  /* EDIT HERE */
+  --fs: 20px;        /* font size */
+  --fw: 700;         /* font weight */
+  --color: #000;     /* text color */
+  --mb: 8px;         /* bottom margin */
+  font-size: var(--fs) !important;
+  font-weight: var(--fw);
+  color: var(--color);
+  margin: 0 0 var(--mb) 0 !important;  /* avoid pushing sticky pane down */
+  line-height: 1.2;
+}
+
+.intro-prose{
+  margin-left: 180px;    /* match the title’s --ml */
+  max-width: 1050px;     /* optional: keep lines comfortable */
+  line-height: 1.5;     /* optional: nicer reading */
+}
+
+/* Force all buttons to white, readable in dark mode too */
+.stButton > button{
+  background:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid #d1d5db !important;
+}
+.stButton > button:hover{ filter:brightness(.97); }
