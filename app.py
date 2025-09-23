@@ -303,7 +303,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 # Footer — optional (no crash if missing in user's theme)
 # ----------------------------
 # Open footer wrapper (HTML)
-st.markdown("<div id='app-footer' class='static'><div class='footer-inner'>", unsafe_allow_html=True)
+st.markdown("<div id='app-footer'><div class='footer-inner'><div class='footer-content'>", unsafe_allow_html=True)
 
 # Content (pure Markdown → safe, clickable links, APA styled)
 st.markdown(
@@ -326,4 +326,4 @@ unsafe_allow_html=False
 )
 
 # Close footer wrapper (HTML)
-st.markdown("</div></div>", unsafe_allow_html=True)
+st.markdown("</div></div></div>", unsafe_allow_html=True)
