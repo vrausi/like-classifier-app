@@ -300,15 +300,28 @@ st.markdown("</div>", unsafe_allow_html=True)
 # ----------------------------
 # Footer — optional (no crash if missing in user's theme)
 # ----------------------------
-footer = """
-<div id='app-footer' class='static'><div class='footer-inner'>
-<strong>Disclaimer</strong>
-<ul>
-<li>The example sentences are used for research/teaching purposes.</li>
-<li>Examples of propositional uses of <strong>like</strong> are sourced from the Oxford English Dictionary (OED), unless stated otherwise.</li>
-<li>Other examples are sourced from the demographically sampled component of the Spoken BNC1994 and the Spoken BNC2014.</li>
-<li>The classification scheme and descriptions come from Raušová (2023).</li>
-</ul>
-</div></div>
+# Open footer wrapper (HTML)
+st.markdown("<div id='app-footer' class='static'><div class='footer-inner'>", unsafe_allow_html=True)
+
+# Content (pure Markdown → safe, clickable links, APA styled)
+st.markdown(
 """
-st.markdown(footer, unsafe_allow_html=True)
+**Disclaimer**
+
+- The example sentences are used for research/teaching purposes.
+- Examples of propositional uses of **like** are sourced from the Oxford English Dictionary (OED), unless stated otherwise.
+- Other examples are sourced from the demographically sampled component of the Spoken BNC1994 and the Spoken BNC2014 (available at https://cqpweb.lancs.ac.uk). The two corpora are easily distinguishable based on their speaker coding patterns — original spoken BNC1994 uses PSxx or KxxPSUNK, while the Spoken BNC2014 uses Sxxxx. Examples were edited for clarity and brevity, including ellipses; wording unchanged.
+- The classification scheme, labels, and descriptions of functions come from Raušová (2023) and sources cited therein.
+
+**Sources**
+
+1. BNC Consortium. (2007). *The British National Corpus, XML Edition*. Oxford Text Archive. https://hdl.handle.net/20.500.12024/2554  
+2. Love, R., Dembry, C., Hardie, A., Brezina, V., & McEnery, T. (2017). The Spoken BNC2014: Designing and building a spoken corpus of everyday conversations. *International Journal of Corpus Linguistics, 22*(3), 319–344. https://doi.org/10.1075/ijcl.22.3.02lov  
+3. Oxford University Press. (n.d.). Like, adj., adv., conj., prep. In *Oxford English Dictionary*. (Retrieved September 16, 2025). https://doi.org/10.1093/OED/1074775262  
+4. Raušová, V. (2023). *Discourse-pragmatic functions of like in spoken discourse* [Unpublished doctoral dissertation]. Faculty of Arts, Charles University. http://hdl.handle.net/20.500.11956/188271
+""",
+unsafe_allow_html=False
+)
+
+# Close footer wrapper (HTML)
+st.markdown("</div></div>", unsafe_allow_html=True)
