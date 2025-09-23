@@ -151,6 +151,16 @@ h1#discourse-pragmatic-like-classifier{
 #app-footer ul{ margin: .5em 0 0 1.25em; padding: 0; }
 #app-footer li{ margin: .2em 0; }
 
+#app-footer{ margin-top:24px; border-top:1px solid #e5e7eb; color:#6b7280; }
+#app-footer .footer-inner{
+  display:grid;
+  grid-template-columns: 0.5fr 3fr 0.4fr 1fr 0.5fr;
+  gap:0; width:100%; padding:16px 0;
+}
+#app-footer .footer-content{ grid-column: 2 / 5; }
+#app-footer a{ text-decoration:underline; color:inherit; }
+#app-footer ul{ margin:.5em 0 0 1.25em; padding:0; }
+#app-footer li{ margin:.2em 0; }
 
 /* =========================
    RIGHT PANEL HEADER (the "Jump to a result" label)
