@@ -114,53 +114,34 @@ h1#discourse-pragmatic-like-classifier{
 /* =========================
    APP FOOTER (Sources/Disclaimer)
    ========================= */
-
-/* Local knobs — change per element, not global */
 #app-footer{
-  --bg: transparent;              /* footer background */
-  --fg: #6b7280;                  /* text color */
-  --link: inherit;                /* link color */
-  --bc: #e5e7eb;                  /* top border color */
-  --fs: 16px;                     /* font size */
-  --lh: 1.2;                      /* line height */
-  --pad-y: 16px;                  /* vertical padding */
-  --pad-x: 0;                     /* horizontal padding inside container */
-  --maxw: 700px;                 /* content width */
-  --gap-top: 24px;                /* space before footer */
-
-  margin-top: var(--gap-top);
-  border-top: 1px solid var(--bc);
-  background: var(--bg);
-  color: var(--fg);
-  font-size: var(--fs);
-  line-height: var(--lh);
+  margin-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  background: transparent;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
+/* Mirror the app’s 5-column layout: [0.5, 3, 0.4, 1, 0.5] */
 #app-footer .footer-inner{
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: var(--pad-y) var(--pad-x);
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.4fr 1fr 0.5fr;
+  gap: 0;
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
 }
 
-#app-footer a{
-  color: var(--link);
-  text-decoration: underline;
+/* Place content across columns 2→4 (left_shell + spacer + results) */
+#app-footer .footer-content{
+  grid-column: 2 / 5;
 }
 
-/* Optional: compact bullets & spacing */
+/* Links & lists */
+#app-footer a{ text-decoration: underline; color: inherit; }
 #app-footer ul{ margin: .5em 0 0 1.25em; padding: 0; }
 #app-footer li{ margin: .2em 0; }
-
-#app-footer{ margin-top:24px; border-top:1px solid #e5e7eb; color:#6b7280; }
-#app-footer .footer-inner{
-  display:grid;
-  grid-template-columns: 0.5fr 3fr 0.4fr 1fr 0.5fr;
-  gap:0; width:100%; padding:16px 0;
-}
-#app-footer .footer-content{ grid-column: 2 / 5; }
-#app-footer a{ text-decoration:underline; color:inherit; }
-#app-footer ul{ margin:.5em 0 0 1.25em; padding:0; }
-#app-footer li{ margin:.2em 0; }
 
 /* =========================
    RIGHT PANEL HEADER (the "Jump to a result" label)
