@@ -187,7 +187,7 @@ with col_results:
                 st.caption("2 paths — click again to view the other route")
         elif grp == "dm":
             if any(len(RESULT_PATHS.get(rid, [])) > 1 for rid in group_ids):
-                st.caption("2 paths — click again to view the other route")
+                st.caption("2 paths (LIKE / IT'S LIKE) — click again to view the other route")
 # (no caption for other groups)
 
         # ----- Left pane: toolbar, result pill, cards -----
