@@ -123,27 +123,33 @@ h1#discourse-pragmatic-like-classifier{
   line-height: 1.2;
 }
 
-/* Mirror the app’s 5-column layout: [0.5, 3, 0.4, 1, 0.5] */
-#app-footer .footer-inner{
+/* Minimal fix: style the Markdown block that comes right after #app-footer */
+#app-footer + div[data-testid="stMarkdown"]{
+  /* mirror your main columns */
   display: grid;
   grid-template-columns: 0.5fr 3fr 0.4fr 1fr 0.5fr;
-  /* ADD THIS ↓ (Streamlit "small" gap ≈ 0.5rem; try 1rem if needed) */
-  column-gap: 0.5rem;
-
+  column-gap: 0.5rem;           /* try 1rem if your main gap looks larger */
   width: 100%;
   padding: 16px 0;
   box-sizing: border-box;
+
+  /* footer look & typography */
+  color: #6b7280;
+  font-size: 12px;              /* tweak me */
+  line-height: 1.4;
 }
 
-/* Place content across columns 2→4 (left_shell + spacer + results) */
-#app-footer .footer-content{
+/* Make the actual content span columns 2→4 */
+#app-footer + div[data-testid="stMarkdown"] > div{
   grid-column: 2 / 5;
 }
 
-/* Links & lists */
-#app-footer a{ text-decoration: underline; color: inherit; }
-#app-footer ul{ margin: .5em 0 0 1.25em; padding: 0; }
-#app-footer li{ margin: .2em 0; }
+/* Links & lists (optional) */
+#app-footer + div[data-testid="stMarkdown"] a{
+  text-decoration: underline; color: inherit;
+}
+#app-footer + div[data-testid="stMarkdown"] ul{ margin: .5em 0 0 1.25rem; padding: 0; }
+#app-footer + div[data-testid="stMarkdown"] li{ margin: .2em 0; }
 
 /* =========================
    RIGHT PANEL HEADER (the "Jump to a result" label)
