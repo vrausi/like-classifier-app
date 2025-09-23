@@ -182,12 +182,12 @@ with col_results:
 # (group_ids is already defined above)
 
 # Show the hint ONLY under PROPOSITIONAL USE and DISCOURSE MARKER
-    if grp == "root":
-        if len(RESULT_PATHS.get("result_prop", [])) > 1:
-        st.caption("2 paths — click again to view the other route")
-    elif grp == "dm":
-        if any(len(RESULT_PATHS.get(rid, [])) > 1 for rid in group_ids):
-            st.caption("2 paths — click again to view the other route")
+        if grp == "root":
+            if len(RESULT_PATHS.get("result_prop", [])) > 1:
+                st.caption("2 paths — click again to view the other route")
+        elif grp == "dm":
+            if any(len(RESULT_PATHS.get(rid, [])) > 1 for rid in group_ids):
+                st.caption("2 paths — click again to view the other route")
 # (no caption for other groups)
 
         # ----- Left pane: toolbar, result pill, cards -----
