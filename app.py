@@ -67,18 +67,12 @@ w_inactive = ss["w_inactive"]
 results_share = ss["results_share"]
 equalize_on_result = ss["equalize_on_result"]
 
-# ----------------------------
-# View options (sidebar)
-# ----------------------------
-hide_examples = st.sidebar.checkbox(
-    "Hide examples", value=ss.get("hide_examples", False), key="hide_examples"
-)
-show_inactive = st.sidebar.checkbox(
-    "Show inactive cards/columns", value=ss.get("show_inactive", False), key="show_inactive"
-)
-single_card_mode = st.sidebar.checkbox(
-    "Single-card mode (show only active + answered)", value=True
-)
+# ===== View options (no sidebar UI) =====
+# Fixed behavior: keep examples visible, hide inactive columns, and force single-card mode ON.
+hide_examples = st.session_state.setdefault("hide_examples", False)  # keep examples visible
+show_inactive = st.session_state.setdefault("show_inactive", False)  # do NOT show inactive cards
+single_card_mode = True  # force ON, no UI toggle
+
 
 # ----------------------------
 # Session state for answers
