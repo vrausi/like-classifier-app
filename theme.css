@@ -127,7 +127,9 @@ h1#discourse-pragmatic-like-classifier{
 #app-footer .footer-inner{
   display: grid;
   grid-template-columns: 0.5fr 3fr 0.4fr 1fr 0.5fr;
-  gap: 0;
+  /* ADD THIS ↓ (Streamlit "small" gap ≈ 0.5rem; try 1rem if needed) */
+  column-gap: 0.5rem;
+
   width: 100%;
   padding: 16px 0;
   box-sizing: border-box;
