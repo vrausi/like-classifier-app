@@ -1,3 +1,31 @@
+/* =========================
+   MINIMAL BASELINE (global)
+   ========================= */
+html, body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size:14px; line-height:1.3; }
+.block-container { padding-top: 1rem !important; }
+
+/* =========================
+   TITLE (single source)
+   ========================= */
+h1#discourse-pragmatic-like-classifier{
+  --fs: 2rem; --fw: 800; --color: #000;
+  --mt: .1em; --mb: .5em; --ml: 180px;
+  font-size: var(--fs); font-weight: var(--fw); color: var(--color);
+  margin-top: var(--mt) !important; margin-bottom: var(--mb) !important;
+  margin-left: var(--ml) !important;
+}
+
+/* =========================
+   RESULT BADGE (top pill)
+   ========================= */
+.res-badge{
+  /* EDIT HERE */
+  --bg:#cecece; --fg:#000000; --border:8px solid color-mix(in srgb, #cecece 45%, transparent);
+  --fs:1.4rem; --fw:900; --radius:20px; --py:15px; --px:10px;
+  display:block; width:100%; box-sizing:border-box; white-space:pre-line; text-align:left;
+  background:var(--bg); color:var(--fg); border:var(--border);
+  font-size:var(--fs); font-weight:var(--fw); border-radius:var(--radius); padding:var(--py) var(--px);
+}
 
 /* =========================
    RESULT DESCRIPTION (under badge)
