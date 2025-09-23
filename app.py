@@ -178,11 +178,19 @@ with col_results:
                     apply_path_to_answers(routes[idx], st.session_state.answers)
                     st.session_state[idx_key] = (idx + 1) % len(routes)
                     st.rerun()
+# ... inside the right-pane loop, right after the inner for rid in group_ids:
+# (group_ids is already defined above)
 
+# Show the hint ONLY under PROPOSITIONAL USE and DISCOURSE MARKER
+    if grp == "root":
         if len(RESULT_PATHS.get("result_prop", [])) > 1:
+        st.caption("2 paths — click again to view the other route")
+    elif grp == "dm":
+        if any(len(RESULT_PATHS.get(rid, [])) > 1 for rid in group_ids):
             st.caption("2 paths — click again to view the other route")
+# (no caption for other groups)
 
-# ----- Left pane: toolbar, result pill, cards -----
+        # ----- Left pane: toolbar, result pill, cards -----
 with left_shell:
     # Toolbar
     st.markdown("<div class='btn-size-marker'></div>", unsafe_allow_html=True)
