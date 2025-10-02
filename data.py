@@ -113,7 +113,7 @@ EXAMPLES = {
     'q12a': "PS6RW: _…we drove past there one time and there was a woman standing outside, she **said LIKE**, oh what do you want, I was like, oh well, we've come to see the house..._",
     'q12b': "S0037:_ I looked at it this morning and **I thought LIKE** oh I should 've thinned that soup out earlier..._",
     'q121': "S0529:_ I don't know what to get her either (S1) **LIKE** (S2) I'm just so bad at present giving..._",
-    'q121a': "LIKE joins two segments where S2 either **elaborates**, **clarifies** or **exemplifies** S1. Choose the subcategory that best fits your example.\n\n_S0619: >>no I know I'm only kidding (S1) **LIKE** (S2) I know it's not my fault..._",
+    'q121a': "LIKE joins two segments where S2 either **elaborates**, **clarifies** or **exemplifies** S1. Choose the subcategory that best fits your example in the next step.\n\n_S0619: >>no I know I'm only kidding (S1) **LIKE** (S2) I know it's not my fault..._",
     'q121aa': "S0644: _If you can't look at someone there is a reason why you can't (S1) **LIKE** (S2) body language has been studied to show that it happens for a reason._",
     'q121ab': "S0644: _You know they do plagiarism now? (S1) **LIKE** (S2) they can scan your work to see if it’s plagiarised._",
     'q121ac': "PS0EB: _She’s not very good at English (S1), **LIKE** (S2) when they were doing Animal Farm, I had to explain that it was a parody of the Russian revolution._",
